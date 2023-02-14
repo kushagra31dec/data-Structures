@@ -14,7 +14,6 @@ public class diagonalSum {
         Scanner scn = new Scanner(System.in);
         System.out.println("Enter the number of rows and columns of the matrix");
         int m = scn.nextInt();
-
         int matrix[][] = new int[m][m];
         System.out.println("Enter the elements of the matrix");
         for (int i = 0; i < m; i++) {
