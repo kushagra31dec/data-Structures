@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 public class spiralMatrix {
-    public static void printSpiral(int matrix [][]) {
+    public static void printSpiralMatrix(int matrix [][]) {
         int startRow=0;
         int endRow=matrix.length-1;
         int startColumn=0;
@@ -41,6 +41,6 @@ public class spiralMatrix {
             {5,6,7,8},
             {9,10,11,12},
             {13,14,15,16}};
-        printSpiral(matrix);
+        printSpiralMatrix(matrix);
     }
 }
