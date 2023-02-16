@@ -1,6 +1,23 @@
 import java.util.*;
 import java.io.*;
+
 public class spiralMatrix {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        System.out.println("Enter the number of rows of the matrix");
+        int m = scn.nextInt();
+        System.out.println("Enter the number of columns of the matrix");
+        int n = scn.nextInt();
+        int matrix[][] = new int[m][n];
+        System.out.println("Enter the elements of the matrix");
+        for (int i = 0; i < m; i++) {
+                for (int j = 0; j < n; j++) {
+                    matrix[i][j] = scn.nextInt();
+                }
+        }
+        printSpiralMatrix(matrix);
+    }
+
     public static void printSpiralMatrix(int matrix [][]) {
         int startRow=0;
         int endRow=matrix.length-1;
@@ -34,13 +51,5 @@ public class spiralMatrix {
             startColumn++;
             endColumn--;
         }
-    }
-    public static void main(String[] args) {
-        int matrix[][] = {
-            {1,2,3,4},
-            {5,6,7,8},
-            {9,10,11,12},
-            {13,14,15,16}};
-        printSpiralMatrix(matrix);
     }
 }
