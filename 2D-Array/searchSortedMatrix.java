@@ -1,6 +1,27 @@
 import java.util.*;
 import java.io.*;
+
 public class searchSortedMatrix {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        System.out.println("Enter the number of rows of the matrix");
+        int m = scn.nextInt();
+        System.out.println("Enter the number of columns of the matrix");
+        int n = scn.nextInt();
+        int matrix[][] = new int[m][n];
+        System.out.println("Enter the elements of the matrix");
+        for (int i = 0; i < m; i++) {
+                for (int j = 0; j < n; j++) {
+                    matrix[i][j] = scn.nextInt();
+                }
+        }
+        System.out.println("Enter the value of the key");
+        int key = scn.nextInt();
+        if(!printSearchSortedMatrix(matrix,key)) {
+            System.out.println("key not found");
+        }
+    }
+
     public static boolean printSearchSortedMatrix(int matrix [][],int key) {
         int row = 0;
         int column = matrix[0].length-1;
@@ -17,15 +38,5 @@ public class searchSortedMatrix {
             }
         }
         return false;
-    }
-    public static void main(String[] args) {
-        int matrix[][] = {
-            {1,2,3,4},
-            {5,6,7,8},
-            {9,10,11,12},
-            {13,14,15,16}};
-            Scanner scn = new Scanner(System.in);
-            int key = scn.nextInt();
-            printSearchSortedMatrix(matrix,key);
     }
 }
